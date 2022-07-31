@@ -43,6 +43,14 @@ switch BayerFormat
         % G
         rawImg(1:2:end, 1:2:end) = orgImg(1:2:end, 1:2:end, 2);
         rawImg(2:2:end, 2:2:end) = orgImg(2:2:end, 2:2:end, 2);
+    case 'BGGR'
+        % B
+        rawImg(1:2:end, 1:2:end) = orgImg(1:2:end, 1:2:end, 3);
+        % R
+        rawImg(2:2:end, 2:2:end) = orgImg(2:2:end, 2:2:end, 1);
+        % G
+        rawImg(2:2:end, 1:2:end) = orgImg(2:2:end, 1:2:end, 2);
+        rawImg(1:2:end, 2:2:end) = orgImg(1:2:end, 2:2:end, 2);
 end
 rawData = rawImg;
 imshow(uint8(rawData));
