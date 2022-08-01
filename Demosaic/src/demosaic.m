@@ -7,11 +7,11 @@
 clc;clear;close all;
 
 %% ------------Raw Format----------------
-filePath = 'images/kodim_8bits_BGGR.raw';
+filePath = 'images/D75_3840_2160_10_0_55_20_2137_1024_1024_1524.raw';
 bayerFormat = 'BGGR';
-width = 512;
-height= 768;
-bits = 8;
+width = 3840;
+height= 2160;
+bits = 10;
 %% --------------------------------------
 bayerData = readRaw(filePath, bits, width, height);
 figure();
@@ -167,7 +167,3 @@ figure,imshow(imDst);title('demosaic image');
 
 % orgImage = imread('images/kodim19.png');
 % figure, imshow(orgImage);title('org image');
-
-
-
-
