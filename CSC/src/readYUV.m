@@ -30,3 +30,4 @@ rawData = z;
 figure();
 imshow(z);
 title('Y of YUV');
+
